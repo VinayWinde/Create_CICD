@@ -2,13 +2,13 @@
 FROM eclipse-temurin:17-jdk-jammy
 
 # Set working directory
-WORKDIR /app
+
 
 # Copy the JAR file into the container
-COPY target/CICDP-0.0.1-SNAPSHOT.jar app.jar
+COPY target/github-actions-sp.jar github-actions-sp.jar
 
 # Expose the default Spring Boot port
 EXPOSE 9076
 
 # Run the application
-ENTRYPOINT ["java", "-jar", "app.jar"]
+ENTRYPOINT ["java", "-jar", "github-actions-sp.jar"]
